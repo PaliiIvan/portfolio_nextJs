@@ -6,6 +6,5 @@ export const PageWrapper: FC<WithChildren> = ({ children }) => {
     return (
         <div className={style.page_wrapper}>
             {children}
-            And!
         </div>)
 }
