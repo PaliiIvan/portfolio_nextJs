@@ -1,4 +1,26 @@
 .page_wrapper {
-    background: linear-gradient(270deg, #424242, #211b35);
-    height: calc(100vh);
+  background: linear-gradient(270deg, #424242, #211b35);
+  height: calc(100vh);
+  cursor: none;
+  * {
+    cursor: none;
+  }
+  .pointer {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    border: 0.15rem solid oldlace;
+    position: absolute;
+    z-index: 100;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    .inner_circle {
+      width: 1rem;
+      height: 1rem;
+      background-color: bisque;
+      border-radius: 100%;
+      filter: blur(0.2rem);
+    }
+  }
 }
