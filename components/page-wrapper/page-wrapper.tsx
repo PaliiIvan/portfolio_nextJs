@@ -2,6 +2,8 @@ import React, { FC, useEffect, useRef } from 'react';
 import { WithChildren } from '../../helpers/types/functional-component.type';
 import { NavigationBar } from '../navigation-bar/navigation-bar';
 import style from './page-wrapper.module.scss';
+import cn from 'classnames';
+import gsap, { Power1 } from 'gsap';
 
 const PageWrapper: FC<WithChildren> = ({ children }) => {
   const pointerRef = useRef<HTMLDivElement>(null);

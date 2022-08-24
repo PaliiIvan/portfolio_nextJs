@@ -1,14 +1,50 @@
+@font-face {
+  font-family: "Nato";
+  src: url("../public/fonts/NotoSans-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Nato";
+  src: url("../public/fonts/NotoSans-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Nato";
+  src: url("../public/fonts/NotoSans-Light.ttf");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Nato";
+  src: url("../public/fonts/NotoSans-Medium.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Norse";
+  src: url("../public/fonts/norse.regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Nato, sans-serif;
+  overflow: hidden;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 * {
