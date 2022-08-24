@@ -1,0 +1,16 @@
+.navigation_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+
+
+    .initials {
+        font-size: 1.5rem;
+    }
+
+    .nav_items_container {
+        display: flex;
+        flex-direction: row;
+    }
+}

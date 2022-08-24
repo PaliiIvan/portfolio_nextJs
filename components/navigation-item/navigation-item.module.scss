@@ -1,0 +1,105 @@
+$border-width: 7.5rem;
+$border-height: 1.2rem;
+
+.nav_item {
+    $border: 0.15rem solid #dadada;
+
+    width: 7.5rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #dadada;
+    margin-right: 5rem;
+
+
+    @mixin borderTopBottom {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+       
+    }
+
+    .border_top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        &:after { // top
+           @include borderTopBottom;
+           border-top: $border;
+        }
+        &:before { //left
+            @include borderTopBottom;
+            border-left: $border;
+        }
+    }
+
+    .border_bottom {
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        transform: rotate(180deg);
+        &:after { // bottom
+            @include borderTopBottom;
+            border-top: $border;
+        }
+        &:before { //left
+            @include borderTopBottom;
+            border-left: $border;
+        }
+    }
+}
+
+.nav_item.active {
+    $animationDuration: 0.5s;
+
+    @mixin animationTopBottomMix {
+        animation: borderTopBottomAnimation $animationDuration linear forwards;
+    }
+
+    @mixin animationLeftRightMix {
+        animation: borderLeftRightAnimation $animationDuration linear  forwards;
+    }
+
+    .border_top {
+        &::after {
+           @include animationTopBottomMix;
+        }
+        &::before {
+            @include animationLeftRightMix;
+            animation-delay: $animationDuration;
+        }
+        
+    }
+
+    .border_bottom {
+        &::after {
+            @include animationTopBottomMix;
+        }
+        &::before {
+            @include animationLeftRightMix;
+            animation-delay: $animationDuration;
+        }
+    }
+
+
+    @keyframes borderTopBottomAnimation {
+        from {
+            width: 0rem;
+        }
+        to {
+            width: $border-width;
+        }
+    }
+
+    @keyframes borderLeftRightAnimation {
+        from {
+            height: 0rem;
+        }
+        to {
+            height: $border-height;
+        }
+    }
+}

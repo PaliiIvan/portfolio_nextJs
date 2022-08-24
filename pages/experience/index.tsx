@@ -1,16 +1,18 @@
 import PageWrapper from "../../components/page-wrapper/page-wrapper";
 import { PageWithLayout } from "../_app";
 
-const AboutSection: PageWithLayout = () => {
+const ExperienceSection: PageWithLayout = () => {
     return <div>
-        Hello From About
+        Hello from Experience
     </div>
 }
 
-AboutSection.getLayout = (page) => (
+
+ExperienceSection.getLayout = (page) => (
     <PageWrapper>
         {page}
     </PageWrapper>
 );
 
-export default AboutSection;
+
+export default ExperienceSection;
