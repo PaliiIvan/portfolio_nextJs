@@ -1,0 +1,70 @@
+@import '../../styles/variables.scss';
+
+.about {
+  display: flex;
+  flex-direction: row;
+  color: #dadada;
+
+  .lef_side {
+    flex: 0.7;
+    margin-left: $base_margin;
+  }
+
+  .right_side {
+    flex: 1;
+    margin-top: 5rem;
+    margin-right: $base_margin;
+    display: flex;
+    flex-direction: column;
+
+    .magic_sentence {
+      font-size: 8rem;
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      font-family: 'Norse';
+    }
+
+    .hello_text {
+      margin-top: 2rem;
+      width: 50%;
+    }
+    .description_text {
+      margin-top: 3rem;
+      width: 50%;
+      margin-left: 10rem;
+    }
+
+    .contact_me {
+      width: 10rem;
+      height: 10rem;
+      align-self: flex-end;
+      justify-self: end;
+      transform: translateY(100%);
+      svg {
+        #left {
+          fill: white !important;
+        }
+        #right {
+          fill: white !important;
+        }
+        path {
+          stroke: #dadada !important;
+        }
+      }
+      .contact_me_text {
+        color: #dadada;
+        transform: translateX(23%);
+      }
+    }
+
+    .linked_in {
+    }
+
+    .github {
+    }
+
+    .mail {
+    }
+  }
+}
