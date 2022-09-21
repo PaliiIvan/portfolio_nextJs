@@ -5,6 +5,7 @@ import { FC } from '../../helpers/types/functional-component.type';
 import { CloseIcon } from '../close-icon/close-icon';
 import styles from './contact-me-bar.module.scss';
 import { Divider } from '../divider/divider';
+import { LinkedInSvg, MailSvg } from '../svg-components';
 
 export type ContactBeBarType = {
   isActive: boolean;
@@ -33,6 +34,10 @@ export const ContactMeBar: FC<ContactBeBarType> = ({ isActive, onClose }) => {
     }
   }, [isActive]);
 
+  const onLinkedInClick = () => {
+    window.location.href = 'https://www.linkedin.com/in/ivan-palii-780629174/';
+  };
+
   return (
     <div ref={containerRef} className={cn(styles.contact_me_bar)}>
       <div onClick={onClose}>
@@ -54,6 +59,16 @@ export const ContactMeBar: FC<ContactBeBarType> = ({ isActive, onClose }) => {
         </button>
       </form>
       <Divider className={styles.divider}>OR</Divider>
+      <div className={styles.social_net}>
+        <div>
+          <MailSvg className={styles.mail} />
+          <div className={styles.icon_desc}>GitHub</div>
+        </div>
+        <div onClick={onLinkedInClick}>
+          <LinkedInSvg className={styles.linked_in} />
+          <div className={styles.icon_desc}>LinkedIn</div>
+        </div>
+      </div>
     </div>
   );
 };

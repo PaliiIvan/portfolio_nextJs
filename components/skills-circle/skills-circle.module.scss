@@ -1,0 +1,63 @@
+$diameter: 10rem;
+
+:export {
+  diameter: $diameter;
+}
+
+.skill_circle {
+  border-radius: 100%;
+  background: linear-gradient(270deg, #211b35, #424242);
+  // border: 0.15rem #dada solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dadada;
+  font-weight: bold;
+  font-family: 'Norse';
+  position: absolute;
+  svg {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    fill: transparent;
+    circle {
+      stroke: #dada;
+      stroke-width: 0.009rem;
+      paint-order: stroke;
+    }
+  }
+}
+
+.skill_circle.big {
+  width: $diameter;
+  height: $diameter;
+  min-width: $diameter;
+  min-height: $diameter;
+  font-size: 2rem;
+}
+
+.skill_circle.--active {
+  circle {
+    animation: increase-dasharray-animation 3s forwards, rotate-border-animation 15s infinite linear;
+  }
+}
+
+@keyframes rotate-border-animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes increase-dasharray-animation {
+  from {
+    stroke-dasharray: 100;
+  }
+
+  to {
+    stroke-dasharray: 0.4;
+  }
+}

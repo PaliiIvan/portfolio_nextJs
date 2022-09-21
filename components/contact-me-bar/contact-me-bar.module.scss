@@ -84,4 +84,23 @@ $width: 40%;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+
+  .social_net {
+    $width: 10rem;
+    display: flex;
+    justify-content: space-around;
+    .linked_in {
+      width: $width;
+      height: $width;
+    }
+
+    .mail {
+      width: $width;
+      height: $width;
+    }
+
+    .icon_desc {
+      transform: translateX(30%);
+    }
+  }
 }

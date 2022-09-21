@@ -1,0 +1,41 @@
+.pointer {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  border: 0.13rem solid oldlace;
+  position: absolute;
+  z-index: 100;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  pointer-events: none;
+
+  .inner_circle {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: bisque;
+    border-radius: 100%;
+    filter: blur(0.2rem);
+    animation: hover-animation 1s infinite;
+  }
+
+  @keyframes hover-animation {
+    0% {
+      opacity: 0;
+      width: 0.1rem;
+      height: 0.1rem;
+    }
+    20% {
+      opacity: 1;
+    }
+
+    100% {
+      width: 2rem;
+      height: 2rem;
+      filter: blur(0);
+      background-color: transparent;
+      border: 0.1rem solid bisque;
+    }
+  }
+}

@@ -39,6 +39,7 @@ body {
   margin: 0;
   font-family: Nato, sans-serif;
   overflow: hidden;
+  font-size: 1rem;
 }
 
 a {
